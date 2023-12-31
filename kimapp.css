@@ -1,0 +1,195 @@
+/* General page styling */
+* {
+    --primary: rgb(14, 35, 35);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--primary);
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar */
+
+#mainNavbar {
+    background-color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+#mainNavbar .navbar-brand {
+    font-weight: 400;
+}
+
+/* Header */
+
+.blockquote-footer {
+    font-size: 0.93rem;
+}
+
+.blockquote-footer a {
+    color: inherit;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.blockquote-footer a:hover {
+    color: rebeccapurple;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+/* main */
+
+main {
+    font-size: 10px;
+}
+
+section p, section li {
+        font-size: 1.1rem;
+}
+
+svg {
+    transform: scale(1.5);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#step-by-step, #adverts {
+    margin: 70px 0;
+}
+
+#sidenotes {
+    margin-bottom: 70px;
+    color: rgb(245, 241, 241);
+    border-radius: 5px;
+    width: 70%;
+    height: 1000px;
+    background: center/cover url(https://images.unsplash.com/photo-1616787928056-ae5ab4b649d8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8S2ltY2hpfGVufDB8fDB8fHww);
+}
+
+#ad-content.row {
+    color: white;
+    text-shadow: 2px 0 0 black;
+    height: 700px;
+    background: center/cover url(https://kimchiprincess.com/wp-content/uploads/2023/03/kimchi-princess-outside-1-1-1.jpg);
+}
+
+#open-hours {
+    border-right: 3px double white;
+    margin: 0 auto;
+}  
+
+#reservation {
+    margin: 50px 0;
+}
+
+table, form {
+    font-size: 1.3rem;
+}
+
+table {
+    margin-top: 130px;
+}
+
+form, form div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+form div {
+    margin: 8px;
+}
+
+form input, form select {
+  width: 300px;
+  height: 30px;
+}
+
+#timeslot {
+    align-self: center;
+}
+
+button {
+    margin: 15px;   
+}
+
+/* footer */
+
+footer {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 100;
+    margin-top: 100px;
+}
+
+footer a {
+    color: inherit;
+}
+
+#footerButton {
+    position: absolute;
+    left: 70%;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+/* Responsive style */
+@media (max-width: 991px) {
+    header h1 {
+        padding-top: 30px;
+    }
+
+    .card {
+        transform: scale(0.85);
+    }
+    
+    #step-by-step, #adverts {
+        margin: 50px 0;
+    }
+
+    #ad-content.row {
+        height: 1200px;
+        background: center/fill url(https://kimchiprincess.com/wp-content/uploads/2023/03/kimchi-princess-outside-1-1-1.jpg);
+    }
+
+    #ad-content div {
+        transform: scale(0.95)
+    }
+
+    #open-hours {
+        border-bottom: 3px double white;
+        border-right: 0;
+        padding-top: 5px;
+    }
+
+    #reservation {
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    table {
+        margin-top: 0;
+    }  
+}
+
+@media (min-width: 991px) and (max-width: 1300px) {
+    .blurb1 {
+        transform: scale(0.9);
+    }
+
+    .blurb2 {
+        transform: scale(0.75);
+    }
+}

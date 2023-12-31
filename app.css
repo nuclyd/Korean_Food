@@ -1,0 +1,473 @@
+/* General page styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    background: center/cover url(https://images.unsplash.com/photo-1546471364-2735697e52d2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fGtvcmVhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D);
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* General class styles */
+.head-font {
+    font-family: 'Lobster Two', sans-serif;
+}
+
+.light {
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+.container {
+    height: 60%;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 30px 20px 30px;
+    container: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(2, 36, 2, 0.7);
+    color: white;
+}
+
+.white-text {
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+/* General elements style */
+h2:not(#dishes h2) {
+    margin-bottom: 7px;
+    text-decoration: underline;
+}
+
+header a:not(a.light), footer > a:last-of-type {
+    text-decoration: none;
+}
+
+section {
+    max-width: 90vw;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Navigation bar */
+#navbar {
+    width: 100%;
+    height: 7%;
+    background: linear-gradient( 45deg, rgba(255, 228, 196, 0.9), rgba(242, 234, 234,0.9));
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+#navbar h1 {
+    font-size: 1.7rem;
+    margin-left: 1%;
+}
+
+#navbar a {
+    margin-right: 20px;
+}
+
+#navbar a:hover, #navbar a:active {
+    color: rgba(231, 115, 37);
+}
+
+#navbar div ul, #navbar div li {
+    list-style: none;
+}
+
+#navbar div ul {
+    flex: 1;
+    width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0 50px;
+    padding: 0;
+}
+
+#navbar div li {
+    display: block;
+    text-align: center;
+    width: 500px;
+    padding: 25px 0;
+ } 
+
+ #navbar div li:hover {
+    background-color: rgba(231, 115, 37, 0.5);
+}
+
+/* 1s section: Intro */
+#intro {
+    width: 66%;
+    text-align: justify;
+    margin: 35px auto 15px;
+    font-size: 1.16rem;
+}
+
+/* 2nd section: Dishes */
+img {
+    width: 100%;
+    min-height: 350px;
+    border-radius: 5px;
+}
+
+#side > img {
+    max-height: 300px important!;
+}
+
+#dishes {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    width: 95%;
+    margin: 10px auto 0;
+}
+
+#dishes article {
+    width: calc(98% / 3);
+    text-align: justify;
+    background: linear-gradient(bisque, rgb(242, 234, 234));
+    border-radius: 10px;
+    padding: 10px;
+    transition: 300ms ease-in-out;
+}
+
+#dishes article:hover {
+    border-top: 0.70rem solid rgba(231, 115, 37, 0.5);
+    border-bottom: 0.70rem solid rgba(231, 115, 37, 0.5);
+    border-radius: 5px;
+    transform: scale(1.07);
+}
+
+
+span a {
+    font-style: italic;
+    font-weight: bold;
+}
+
+span a:hover {
+    color: rgba(231, 115, 37);
+}
+
+span a:focus {
+    color: rgb(106, 17, 76);
+}
+
+/* 3rd section: Learn more */
+#more {
+    width: 60%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 30px;
+    line-height: 40px;
+    background-color: rgba(231, 115, 37, 0.4);
+    text-shadow: 2px 0 0 black;
+}
+
+#more div:not(:nth-of-type(3)) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    display: block;
+    border-radius: 5px;
+    width: 53%;
+    height: 28px;
+}
+
+#frequency {
+    display: block;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 330px;
+    height: 25px;
+}
+
+label[for="frequency"] {
+    margin-top: 10px;
+}
+
+#agree_tos {
+    font-family: inherit;
+    margin: 30px 0;
+}
+
+label[for="agree_tos"] {
+    font-style: italic;
+}
+
+#subscribe {
+    height: 45px;
+    width: 150px;
+    padding: 5px;
+    font-family: inherit;
+    border-radius: 7px;
+    border: 5px double rgba(243, 246, 243, 0.7);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: white;
+    background: linear-gradient(rgb(2, 36, 2), rgb(10, 83, 49) , rgb(2, 36, 2));
+    transition: 150ms ease-in-out;
+}
+
+#subscribe:hover {
+    transform: scale(1.1);
+    background: linear-gradient(rgb(3, 58, 3), rgb(14, 112, 66) ,rgb(4, 70, 4));
+}
+
+#subscribe:focus {
+    transform: scale(1.1);
+    background: linear-gradient(rgb(24, 3, 58), rgb(59, 45, 131) ,rgb(24, 3, 58));
+}
+
+/* footer  */
+
+footer {
+    background: linear-gradient(bisque, rgb(242, 234, 234), bisque);
+    padding: 20px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+footer div p :hover {
+    color: rgba(231, 115, 37);
+}
+
+footer div p :focus {
+color: rgb(106, 17, 76);
+}
+
+.back-top-button {
+    position: relative;
+    left: 70%;
+    top: 20%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    columns: rgb(2, 36, 2);
+    border: 2px solid rgb(2, 36, 2);
+    border-radius: 15px;
+    height: 50px;
+    width: 110px;
+    padding: 8px 10px;
+    transition: 100ms ease-in;
+    box-shadow: 1px 1px 2px rgb(2, 36, 2);
+}
+
+.back-top-button:hover {
+    background-color: rgb(2, 36, 2);
+    color: white;
+    border: 1px double white;
+    transform: scale(0.95);
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 48em) {
+    /* General class sytling */
+    .container {
+        width: 100%;
+        padding: 85px 15px 20px 15px;
+
+    }
+
+    /* General element styling */
+    section {
+        max-width: 100%;
+        margin-top: 5px;
+    }
+
+    /* Navigation bar */
+    #navbar {
+        flex-wrap: wrap;
+        padding: 10px 10px;
+        width: 100%;
+        height: 12vh;
+        font-size: 1rem;
+        justify-content: flex-start;
+        align-items: baseline;
+        overflow: hidden;
+    }
+
+    #navbar h1 {
+        width: 220px;
+        margin: 0 0 10px 10px;
+    }
+
+    #navbar div ul {
+        width: 280px;
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar div li {
+        text-align: center;
+        width: 91px;
+        height: 50px;
+        padding: 0;
+     } 
+
+     /* 1st section: Intro */
+    #intro {
+        width: 95%;
+        margin-top: 15px;
+        padding-bottom: 0;
+        font-size: 0.955rem; 
+    }
+
+    /* 2nd section: Dishes */
+    #dishes {
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    #dishes article {
+        width: 100%;
+        text-align: justify;
+        font-size: 0.88rem;
+        margin: 8px 0;
+    }
+
+    #dishes article:hover {
+        transform: scale(1.03);
+    }
+
+    /* 3rd section: Learn more */
+
+    #more {
+        width: 90%;
+    }
+
+    #email {
+        width: 53%;
+    }
+
+    #agree_tos {
+        margin-bottom: 5px;
+    }
+
+    #subscribe {
+        margin-top: 15px;
+    }
+
+}
+
+@media (min-width: 48em) and (max-width: 80em) {
+
+    /* Class styling */
+    .container {
+        flex-wrap: wrap;
+        flex-grow: 0.1;
+        padding: 50px;
+    }
+
+    /* Navigation bar */
+    #navbar {
+        flex-wrap: wrap;
+        padding: 10px 10px;
+        width: 100%;
+        height: 7vh;
+        font-size: 1.15rem;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+            
+    #navbar h1 {
+        width: 220px;
+        margin: 0 0 10px 10px;
+    }
+    
+     #navbar div ul {
+        width: 400px;
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        }
+    
+        #navbar div li {
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            padding: 0;
+         }
+
+    /* 1st section: Intro */
+    #intro {
+        width: 91%;
+        margin-top: 45px;
+        padding-bottom: 0;
+        font-size: 1.2rem; 
+    }
+
+    /* 2nd section: Dishes */
+    #dishes {
+        flex-wrap: wrap;
+    }
+
+    #dishes article {
+        width: 100%;
+        height: 100%;
+        transform: 0.01;
+        margin: 20px;
+    }
+
+    /* 3rd section: Learn more */
+    #more {
+        width: 88%;
+    }
+    
+    #email {
+         width: 53%;
+    }
+    
+    #agree_tos {
+        margin-bottom: 5px;
+    }
+    
+    #subscribe {
+        margin-top: 15px;
+    }
+
+}

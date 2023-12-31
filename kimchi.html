@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="kimapp.css" />
+
+    <title>Kimchi recipe</title>
+  </head>
+
+  <body>
+    <nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a class="navbar-brand" href="kimchi.html"
+        >Home <span class="sr-only">(current)</span></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navLinks"
+        aria-controls="#navLinks"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <!-- Jumps down to recipe details-->
+            <a class="nav-link" href="#Section2">Recipe</a>
+          </li>
+          <!-- Opens the K-food page-->
+          <li class="nav-item">
+            <a class="nav-link" href="k_food.html">K-food</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Notes</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+          />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <header class="my-lg-5 text-center pt-5">
+      <blockquote class="blockquote">
+        <h1 class="display-1 mb-2">Traditional Kimchi</h1>
+        <p class="blockquote-footer">
+          Inspired by and copy-pasted from
+          <a
+            target="_blank"
+            href="https://www.koreanbapsang.com/baechu-kimchi-napa-cabbage-kimchi/"
+            >KOREAN BAPSANG</a
+          ><sup>&copy;</sup>
+        </p>
+      </blockquote>
+      <p class="text-center m-4">
+        Everything you need to know about the delicious powerfood with an easy
+        recipe to make your own authentic Kimchi at home!
+      </p>
+    </header>
+    <main class="px-5 mt-5">
+      <section id="definition" class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-6 px-0">
+            <img
+              class="img-fluid"
+              src="https://www.koreanbapsang.com/wp-content/uploads/2019/11/DSC_0831-e1645400234347.jpg"
+              alt="two Kimchi cabbages in a bowl"
+              width="1000px"
+            />
+          </div>
+          <div class="col-lg-6 text-center px-0 py-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 col-xl-10 blurb1">
+                <h3 class="display-4 m-0">What is Kimchi?</h3>
+                <svg
+                  class="d-none d-lg-inline my-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="32"
+                  width="32"
+                  viewBox="0 0 512 512"
+                >
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                  <path
+                    d="M428.3 3c11.6-6.4 26.2-2.3 32.6 9.3l4.8 8.7c19.3 34.7 19.8 75.7 3.4 110C495.8 159.6 512 197.9 512 240c0 18.5-3.1 36.3-8.9 52.8c-6.1 17.3-28.5 16.3-36.8-.1l-11.7-23.4c-4.1-8.1-12.4-13.3-21.5-13.3H360c-13.3 0-24-10.7-24-24V152c0-13.3-10.7-24-24-24l-17.1 0c-21.3 0-30-23.9-10.8-32.9C304.7 85.4 327.7 80 352 80c28.3 0 54.8 7.3 77.8 20.2c5.5-18.2 3.7-38.4-6-55.8L419 35.7c-6.4-11.6-2.3-26.2 9.3-32.6zM171.2 345.5L264 160l40 0v80c0 26.5 21.5 48 48 48h76.2l23.9 47.8C372.3 443.9 244.3 512 103.2 512H44.4C19.9 512 0 492.1 0 467.6c0-20.8 14.5-38.8 34.8-43.3l49.8-11.1c37.6-8.4 69.5-33.2 86.7-67.7z"
+                  />
+                </svg>
+                <p>
+                  Kimchi (김치) is a collective term for vegetable dishes that
+                  have been salted, seasoned, and fermented. The its history
+                  goes back to ancient times. Originated from pickled
+                  vegetables, there are now hundreds of kimchi varieties in
+                  Korea. You can find some of the most common ones in my 15 easy
+                  kimchi recipes.
+                </p>
+                <p>
+                  Over the last decade or so, Korean kimchi has gained a global
+                  recognition as a healthy probiotic food. It's a good source of
+                  useful lactic acid bacteria, has excellent anti-oxidation and
+                  anti-cancer effects, and helps prevent aging.
+                </p>
+                <p>
+                  This recipe is made with baechu (배추), known as napa cabbage,
+                  hence the name baechu kimchi. Because the cabbage is kept
+                  intact at its head, it's also known as pogi kimchi (포기김치).
+                  Pogi means a “head” of a vegetable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="tools" class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 px-0">
+            <img
+              class="img-fluid"
+              src="https://images.unsplash.com/photo-1614540527480-1a0818eafcbb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhYmJhZ2V8ZW58MHx8MHx8fDA%3D"
+              alt="two row nappa cabbages on vegetable"
+              width="900px"
+            />
+          </div>
+          <div class="col-lg-6 order-1 px-0">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 col-xl-11 pt-3 blurb2">
+                <h3 class="display-4 mb-4 text-center order-lg-1">
+                  What do you need to make Kimchi?
+                </h3>
+                <div class="icon">
+                  <svg
+                    class="d-none d-lg-inline mx-4 mb-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    width="36"
+                    viewBox="0 0 576 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                    <path
+                      d="M240 144A96 96 0 1 0 48 144a96 96 0 1 0 192 0zm44.4 32C269.9 240.1 212.5 288 144 288C64.5 288 0 223.5 0 144S64.5 0 144 0c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16H496c26.5 0 48 21.5 48 48s-21.5 48-48 48H392c-14.2 0-27-6.2-35.8-16H284.4zM144 80a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM400 240c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H280c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24zM288 464V352H512V464c0 26.5-21.5 48-48 48H336c-26.5 0-48-21.5-48-48zM48 320h80 16 32c26.5 0 48 21.5 48 48s-21.5 48-48 48H160c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V336c0-8.8 7.2-16 16-16zm128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160v32h16zM24 464H200c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24z"
+                    />
+                  </svg>
+                </div>
+
+                <h4>Ingredients</h4>
+                <ul>
+                  <li>
+                    1 large Napa cabbage, baechu (배추), about 5 to 6 pounds, or
+                    2 small (about 3 pounds each)
+                  </li>
+                  <li>
+                    1 cup Korean coarse sea salt, gulgeun soguem (굵은소금)
+                  </li>
+                  <li>5 cups water</li>
+                  <li>1 pound Korean radish, mu (무)</li>
+                  <li>
+                    <sup>1</sup>/<sub>4</sub> large Korean pear (배) -
+                    <i>optional</i>
+                  </li>
+                  <li>3 - 4 scallions</li>
+                  <li>
+                    1 piece dasima, 다시마 (dried kelp), about 2 to 3 inch
+                    square -
+                    <i>optional</i>
+                  </li>
+                </ul>
+                <h4>Seasonings</h4>
+                <ul>
+                  <li>
+                    1 tablespoon glutinous rice flour, chapssal garu (찹쌀가루)
+                  </li>
+                  <li>
+                    <sup>1</sup>/<sub>2</sub> cup gochugaru, 고추가루 - adjust
+                    to taste
+                  </li>
+                  <li>
+                    <sup>1</sup>/<sub>4</sub> cup saeujeot, 새우젓 (salted and
+                    fermented shrimp), roughly chopped
+                  </li>
+                  <li>3 tablespoons myulchiaekjeot, 멸치액젓 (fish sauce)</li>
+                  <li>
+                    3 - 4 raw shrimps, about 2 ounces, finely minced or ground -
+                    <i>optional</i>
+                  </li>
+                  <li>3 tablespoons minced garlic</li>
+                  <li>1 teaspoon grated ginger</li>
+                  <li><sup>1</sup>/<sub>2</sub> cup water or dasima broth</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="step-by-step" class="container-fluid px-4">
+        <h3 class="display-4 my-lg-5 text-center">Kimchi Step-by-Step</h3>
+        <div class="row">
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2015/05/kimchi-recipe-step-1-e1431839519165.jpg"
+              alt="cabbage cut in half"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 1</h5>
+              <p class="card-text">
+                Cut the thick white part of the cabbage in half lengthwise.
+                Then, slowly pull it apart to separate into two pieces. Do the
+                same for each half to make quarters. Running the knife through
+                all the way would unnecessarily cut off the cabbage leaves.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2019/11/DSC6301-2-e1572930821384.jpg"
+              alt="cabbage in a large bowl with water"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 2</h5>
+              <p class="card-text">
+                In a large bowl, dissolve 1/2 cup of salt in 5 cups of water.
+                Thoroughly bathe each cabbage quarter in the salt water one at a
+                time, shake off excess water back into the bowl, and then
+                transfer to another bowl.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2019/11/kimchi-recipe-step-3-2-e1572930919821.jpg"
+              alt="another picture of cabbage"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 3</h5>
+              <p class="card-text">
+                Using the other half of salt and sprinkle it over the white part
+                of each leaf. Repeat with the rest of the cabbage. Pour the
+                remaining salt water from the first bowl over the cabbage. Set
+                aside for about 6-8 hrs, rotating with the bottom ones every 2-3
+                hrs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2015/05/kimchi-recipe-step-4-e1431839739626.jpg"
+              alt="more cabbage"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 4</h5>
+              <p class="card-text">
+                The cabbages should be ready to be washed when the white parts
+                of the leaves are bendable. It's okay to have a bit of
+                resistance. Rinse thoroughly 3 times, especially between the
+                white parts. Drain well, cut side down.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2019/11/DSC6314-e1572968354947.jpg"
+              alt="moist rice flour simmering over low heat"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 5</h5>
+              <p class="card-text">
+                Meanwhile, make the optional dasima broth by boiling a small
+                piece (2-3 inch square) in 1.5 cups of water for 5 min, and
+                cool. Mix the rice flour with 1/2 cup water and simmer over low
+                heat until it thickens to a thin paste, and cool. Yields about
+                3-4 tbs.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2015/05/kimchi-recipe-step-51-e1431840659121.jpg"
+              alt="kimchi seasoning"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 6</h5>
+              <p class="card-text">
+                Prepare the garlic, ginger and saeujeot. Combine all the
+                seasoning ingredients, including the rice paste and about 1/2
+                cup water (or the optional dashima broth), and mix well. Set
+                aside until the gochugaru dissolves slightly and becomes pasty.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2015/05/kimch-recipe-step-6-e1431839864547.jpg"
+              alt="adding cut raddish and mixing with the seasoning"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 7</h5>
+              <p class="card-text">
+                Cut the radish and pears into matchsticks transferring to a
+                large bowl. Cut the scallions into about 1-inch long pieces. Add
+                the prepared seasoning mix to the radish. Throw in the
+                scallions, and mix everything lightly. You can add salt, more
+                salted shrimp or fish sauce, as needed. Let it sit for about 30
+                minutes to allow the flavors to meld nicely.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2015/05/kimchi-recipe-step-7-e1431839970965.jpg"
+              alt="spreading the radish mix over cabbage leafs"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 8</h5>
+              <p class="card-text">
+                Cut off the tough stem part from each cabbage quarter, leaving
+                enough to hold the leaves together. Place one cabbage quarter in
+                the bowl with the radish mix. Spread the radish mix over each
+                leaf, one to two tablespoons for large leaves. (Eyeball the
+                stuffing into 4 parts and use one part for each cabbage
+                quarter.)
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-12" style="width: 25rem">
+            <img
+              src="https://www.koreanbapsang.com/wp-content/uploads/2019/11/DSC6357-2-e1572930979343.jpg"
+              alt="kimchi put in the container to be stored for the ripening process"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Step 9</h5>
+              <p class="card-text">
+                Fold the leaf part of the cabbage over toward the stem and wrap
+                it with the outermost leaf. Place it, in a jar or airtight
+                container. Repeat with the remaining cabbages. Once all the
+                cabbages are in the jar, press down hard to remove air pockets.
+                To collect any seasoning left, rinse the bowl with 1/2 cup of
+                water and add it to the kimchi container. Close the lid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sidenotes" class="container-fluid text-center p-1">
+        <h3 class="display-4 my-5">Sidenotes</h3>
+        <ul class="mx-5">
+          <li class="pb-5">
+            Leave it out at room temperature for a full day or two. It can be
+            longer, depending on the weather and how fast you want your kimchi
+            to ripen. Then, store in the fridge.
+          </li>
+          <li class="pb-5">
+            You can cover the top of the kimchi with large outer green leaves
+            (as I did in the video) if available. Some people also use a plastic
+            wrap to cover. But, this is not absolutely necessary, especially for
+            this small batch of kimchi.
+          </li>
+          <li class="pb-5">
+            Although you can start eating it any time, kimchi needs about two
+            weeks in the fridge to fully develop the flavors. It maintains great
+            flavor and texture for several weeks.
+          </li>
+        </ul>
+      </section>
+      <section id="advert" class="container-fluid text-center">
+        <h3 class="display-4 m-0">Kimchi Princess Advertisement</h3>
+        <p>
+          Are you too lazy to make your own Kimchi? No worries! You can always
+          eat delicious Kimchi among other traditional K-food at Kimchi Princess
+          in Berlin X-Berg!
+        </p>
+
+        <div id="ad-content" class="row">
+          <div id="open-hours" class="col-lg-6 mx-auto py-5">
+            <h4>Opening Hours</h4>
+            <p>
+              Here are the opening hours of Kimchi Princess according to Google:
+            </p>
+            <table class="mx-auto">
+              <tr>
+                <th>Weekday</th>
+                <th>Opening hours</th>
+              </tr>
+              <tr>
+                <td>Monday</td>
+                <td>closed</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>17:00 - 23:00</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>17:00 - 23:00</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>17:00 - 23:00</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>17:00 - 23:00</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>17:00 - 23:00</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>17:00 - 23:00</td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="reservation" class="col-lg-6">
+            <h4>Make a reservation</h4>
+            <form action="">
+              <div>
+                <label for="name">Your Name:*</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter a first or last name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="num">Number of people:*</label>
+                <input
+                  type="number"
+                  id="num"
+                  name="num"
+                  min="1"
+                  max="20"
+                  placeholder="Enter the number of people"
+                  required
+                />
+              </div>
+              <div>
+                <label for="phone">Your phone number:*</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. 0152345678"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Your Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g. yourmail@domain.com"
+                />
+              </div>
+              <div>
+                <label for="timeslot"
+                  >Select your preferred date &amp; time:*</label
+                >
+                <select id="timeslot" name="timeslot" required>
+                  <option value="">--Please choose an option--</option>
+                  <option value="Tue 19:30">Tuesday 19:30</option>
+                  <option value="Wed 17:00">Wednesday 17:00</option>
+                  <option value="Wed 19:30">Wednesday 19:30</option>
+                  <option value="Fri 18:30">Friday 18:30</option>
+                </select>
+                <!-- let's ignore the fact that without dates etc. this is absolutely not functional-->
+              </div>
+              <button class="btn btn-outline-light btn-lg align-self-center">
+                Submit
+              </button>
+              <p><small>Fields marked with * are required.</small></p>
+              <p>
+                <small
+                  >Disclaimer: We earn no money by advertising for Kimchi
+                  Princess</small
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="p-4 text-white">
+      <button id="footerButton" class="btn btn-outline-light mt-5">
+        <a href="#">Back to top</a>
+      </button>
+      <nav id="footerNavbar" class="nav flex-column">
+        Sources:
+        <a
+          class="nav-link active"
+          href="https://www.koreanbapsang.com/baechu-kimchi-napa-cabbage-kimchi/"
+          target="_blank"
+          >Korean Bapsang</a
+        >
+        <a
+          class="nav-link"
+          href="https://kimchiprincess.com/de/"
+          target="_blank"
+          >Kimchi Princess</a
+        >
+        <a
+          class="nav-link"
+          href="https://unsplash.com/s/photos/cabbage"
+          target="_blank"
+          >Unsplash</a
+        >
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >&copy; 2023 Lydie Kouang & Andreas Landes</a
+        >
+      </nav>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
